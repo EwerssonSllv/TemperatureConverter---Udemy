@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/valorTemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Value of Temperature"
+        android:textAlignment="center"
+        />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/fahreinheitRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fahrenheit"
+            android:checked="false"
+            />
+
+        <RadioButton
+            android:id="@+id/celciusRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Celcius"
+            android:checked="false"
+            />
+
+</RadioGroup>
+
+    <Button
+        android:id="@+id/converterButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Converter" />
+
+
+</LinearLayout>
