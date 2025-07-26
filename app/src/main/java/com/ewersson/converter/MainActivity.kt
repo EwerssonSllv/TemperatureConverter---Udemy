@@ -12,8 +12,8 @@ import androidx.appcompat.app.AppCompatActivity
 class MainActivity : AppCompatActivity() {
 
     private lateinit var editText: EditText
-    private lateinit var celciusRadio: RadioButton
-    private lateinit var fahreinheitRadio: RadioButton
+    private lateinit var celsiusRadio: RadioButton
+    private lateinit var fahrenheitRadio: RadioButton
     private lateinit var converterButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,8 +21,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         editText = findViewById(R.id.valorTemp)!!
-        celciusRadio = findViewById(R.id.celciusRadio)
-        fahreinheitRadio = findViewById(R.id.fahreinheitRadio)
+        celsiusRadio = findViewById(R.id.celsiusRadio)
+        fahrenheitRadio = findViewById(R.id.fahrenheitRadio)
 
         converterButton = findViewById(R.id.converterButton)
         converterButton.setOnClickListener { converter(it) }
@@ -34,9 +34,9 @@ class MainActivity : AppCompatActivity() {
             try {
                 var temp: Double = editText.text.toString().toDouble()
 
-                if (celciusRadio.isChecked) {
+                if (celsiusRadio.isChecked) {
                     temp = (temp - 32) * 5 / 9
-                } else if (fahreinheitRadio.isChecked) {
+                } else if (fahrenheitRadio.isChecked) {
                     temp = temp * 9 / 5 + 32
                 }
 

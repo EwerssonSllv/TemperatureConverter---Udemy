@@ -1,49 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/valorTemp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Value of Temperature"
+        android:hint="@string/et_label_temp"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
         android:textAlignment="center"
-        />
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edittext_background"/>
 
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
 
         <RadioButton
-            android:id="@+id/fahreinheitRadio"
-            android:layout_width="match_parent"
+            android:id="@+id/fahrenheitRadio"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Fahrenheit"
-            android:checked="false"
-            />
+            android:text="@string/rd_label_fahrenheit"
+            android:layout_marginBottom="8dp" />
 
         <RadioButton
-            android:id="@+id/celciusRadio"
-            android:layout_width="match_parent"
+            android:id="@+id/celsiusRadio"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Celcius"
-            android:checked="false"
-            />
-
-</RadioGroup>
+            android:text="@string/rd_label_celsius" />
+    </RadioGroup>
 
     <Button
         android:id="@+id/converterButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Converter" />
-
+        android:text="@string/btn_label_converter"
+        android:backgroundTint="@color/colorAccent"
+        android:textColor="@android:color/white"
+        android:padding="12dp"
+        android:textAllCaps="false" />
 
 </LinearLayout>

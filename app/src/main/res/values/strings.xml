@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Converter</string>
+    <string name="et_label_temp">Enter the temperature</string>
+    <string name="rd_label_celsius">Celsius</string>
+    <string name="rd_label_fahrenheit">Fahrenheit</string>
+    <string name="btn_label_converter">CONVERT TEMPERATURE</string>
 </resources>
